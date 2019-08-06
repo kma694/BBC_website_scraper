@@ -9,9 +9,10 @@ articles = soup.find_all('div', { 'class': 'gs-c-promo' })
 for article in articles:
     print("ARTICLE")
     headline = article.find('h3')
-    print(headline.text)
-    link = article.find('a')
-    print(link['href'])
+    print('HEADLINE: ' + headline.text)
     summary = article.find('p')
     if summary:
-        print(summary.text)
+        print('SUMMARY: ' + summary.text)
+    link = article.find('a')
+    print('LINK: ' + link['href'])
+    
